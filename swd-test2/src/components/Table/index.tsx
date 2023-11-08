@@ -94,13 +94,11 @@ const TableComponent = () => {
   };
 
   const handleDelete = (uuid: string) => {
-    console.log("key", uuid);
     dispatch(deleteForm(uuid));
   };
 
   const handleDeleteOutside = () => {
     if (selectedRow.length) {
-      console.log("handleDeleteOutside");
       for (let i = 0; i < selectedRow.length; i++) {
         dispatch(deleteForm(selectedRow[i].uuid));
       }

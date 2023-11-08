@@ -6,6 +6,5 @@ export const useGetForms = () => {
 
 export const useGetFormToUpdate = (uuid: string) => {
   const forms = useGetForms();
-  console.log(forms);
   return forms.find((item: { uuid: string }) => item.uuid === uuid) || null;
 };

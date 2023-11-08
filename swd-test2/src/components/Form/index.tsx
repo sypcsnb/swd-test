@@ -50,9 +50,7 @@ const FormComponent = () => {
   const { uuid } = useSelector((state: any) => state.updateByUuid);
   const formToUpdate = useGetFormToUpdate(uuid);
   const [form] = Form.useForm();
-  console.log("formToUpdate", formToUpdate);
   const dispatch = useDispatch();
-  console.log("initialValues", initialValues);
 
   useEffect(() => {
     if (formToUpdate) {
@@ -73,9 +71,7 @@ const FormComponent = () => {
         passport: formToUpdate.passport,
         expectedSalary: formToUpdate.expectedSalary,
       };
-      console.log("updateData", updateData);
       form.setFieldsValue(updateData);
-      //   setInitialValues(updateData);
     } else {
       form.setFieldsValue(initialValues);
     }
